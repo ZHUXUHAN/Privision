@@ -1,0 +1,49 @@
+GLOBAL:
+  BANNER: 'Ship Analysis System'
+  PYTORCH_EVERYTHING_ROOT: '/home/user/workspace/PytorchEveryThing'
+ICONS:
+  LOGO: 'icons/ship_icon.jpg'
+FUNC_OPT:
+  FUNC1:
+    MODULE: 'object_cls'
+    CLASS: 'ObjCls'
+    GPU_ID: 0
+    ICON: './icons/icon-right/ship-recog-bright'
+    ICON_SIZE: (110, 70)
+  FUNC2:
+    MODULE: ''
+    CLASS: ''
+    GPU_ID: 0
+    ICON: './icons/icon-right/not-active-bright.png'
+    ICON_SIZE: (110, 70)
+  FUNC3:
+    MODULE: ''
+    CLASS: ''
+    GPU_ID: 0
+    ICON: './icons/icon-right/not-active-bright.png'
+    ICON_SIZE: (110, 70)
+  FUNC4:
+    MODULE: ''
+    CLASS: ''
+    GPU_ID: 0
+    ICON: './icons/icon-right/not-active-bright.png'
+    ICON_SIZE: (110, 70)
+  FUNC5:
+    MODULE: ''
+    CLASS: ''
+    GPU_ID: 0
+    ICON: './icons/icon-right/not-active-bright.png'
+    ICON_SIZE: (110, 70)
+MODULES:
+  OBJCLS:
+    CFG: 'ckpts/cls/imagenet/resnet18_1x64d/resnet18_1x64d.yaml'
+  PPD:
+    CFG: 'ckpts/ssd/priv_personparts/fssd_vgg16_512x512_coco/fssd_vgg16_512x512_coco.yml'
+  PPS:
+    # CFG: 'ckpts/semseg/lip_mlhp/resnet26_1x64d_dilated16-ppm_bilinear_deepsup-crop-2x/resnet26_1x64d_dilated16-ppm_bilinear_deepsup-crop-2x.yml'
+    CFG: 'ckpts/semseg/lip_mlhp/air101_1x64d_dilated8-ppm_bilinear_deepsup-crop/air101_1x64d_dilated8-ppm_bilinear_deepsub-crop.yml'
+  PI:
+#    CFG: 'ckpts/maskrcnn/mscoco/e2e_mask_rcnn_C58-B70-FPN_1x/e2e_mask_rcnn_C58-B70-FPN_1x.yaml'
+#    CFG: 'ckpts/maskrcnn/mscoco/e2e_mask-keypoint_rcnn_R-26-1x64d-FPN_s1x/e2e_mask-keypoint_rcnn_R-26-1x64d-FPN_s1x.yaml'
+    CFG: 'ckpts/maskrcnn/mscoco/e2e_mask-keypoint_rcnn_R-50-FPN_s1x_ms6/e2e_mask-keypoint_rcnn_R-50-FPN_s1x_ms6.yaml'
+#    CFG: 'ckpts/maskrcnn/mscoco/e2e_mask_rcnn_A-101-FPN_2x_ms7/e2e_mask_rcnn_A-101-FPN_2x_ms7.yaml'

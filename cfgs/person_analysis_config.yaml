@@ -1,0 +1,51 @@
+GLOBAL:
+  BANNER: 'Person Analysis System'
+  PYTORCH_EVERYTHING_ROOT: '/home/user/Program/PytorchEveryThing'
+FUNC_OPT:
+  FUNC1:
+    MODULE: 'person_pose'
+    CLASS: 'PersonPose'
+    GPU_ID: 0
+    ICON: './icons/icon-right/human-pose-bright.png'
+    ICON_SIZE: (110, 70)
+  FUNC2:
+    MODULE: 'person_parsing'
+    CLASS: 'PersonParsing'
+    GPU_ID: 0
+    ICON: './icons/icon-right/human-seg-bright.png'
+    ICON_SIZE: (110, 70)
+  FUNC3:
+    MODULE: 'person_densepose'
+    CLASS: 'PersonDensePose'
+    GPU_ID: 0
+    ICON: './icons/icon-right/densepose-bright.png'
+    ICON_SIZE: (110, 70)
+  FUNC4:
+    MODULE: 'personpart_det'
+    CLASS: 'PersonPartDet'
+    GPU_ID: 0
+    ICON: './icons/icon-right/personpart-det-bright.png'
+    ICON_SIZE: (110, 70)
+  FUNC5:
+    MODULE: 'personface_det'
+    CLASS: 'PersonFaceDet'
+    GPU_ID: 0
+    ICON: './icons/icon-right/face-detection-bright.png'
+    ICON_SIZE: (110, 70)
+MODULES:
+  OBJCLS:
+    CFG: 'ckpts/cls/imagenet/resnet18_1x64d/resnet18_1x64d.yaml'
+  PPD:
+    CFG: 'ckpts/maskrcnn/privpersonpart/e2e_faster_rcnn_R-26-1x64d-FPN-COCO_2x_ms7k2/e2e_faster_rcnn_R-26-1x64d-FPN-COCO_2x_ms7k2.yaml'
+  PPO:
+    CFG: 'ckpts/maskrcnn/mscoco_person/e2e_keypoint_mask_rcnn_R-26-1x64d-FPN-CONVX384_s1x_ms_trainval/e2e_keypoint_mask_rcnn_R-26-1x64d-FPN-CONVX384_s1x.yaml'
+  PPA:
+    CFG: 'ckpts/maskrcnn/CIHP/e2e_parsing_rcnn_R-50-FPN-PSS-ERR-ASPP-PBD-2xLW_3x_COCO_ms/e2e_parsing_rcnn_R-50-FPN-PSS-ERR-ASPP-PBD-2xLW_3x_COCO_ms.yaml'
+  PDP:
+    CFG: 'ckpts/maskrcnn/DensePose_COCO/e2e_parsing_rcnn_R-50-FPN-PSS-ERR_s1x_ms/e2e_parsing_rcnn_R-50-FPN-PSS-ERR_s1x_ms.yaml'
+  PPS:
+    CFG: 'ckpts/semseg/lip_mlhp/resnet50_1x64d_syncbn_dilated8-ppm_bilinear_deepsup-crop/resnet50_1x64d_syncbn_dilated8-ppm_bilinear_deepsup.yaml'
+  PFD:
+    CFG: 'ckpts/maskrcnn/wider_face/e2e_faster_rcnn_R-50-FPN_2x_ms/e2e_faster_rcnn_R-50-FPN_2x_ms.yaml'
+  FKP:
+    CFG: 'ckpts/cls/face_keypoints/ldmk10_84/ldmk10_84.yaml'
